@@ -20,6 +20,7 @@ async function handleSubmit(e) {
       try {
         const res = await TransferService.makeRequest(article)   
           
+        console.log(res)
         res.data.obj.data.forEach(async (element,key) => {
 
           article['url']="http://localhost:8080/static/img?fileName="+element[0]+".jpg"
